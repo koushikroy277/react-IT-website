@@ -1,0 +1,221 @@
+.serviceParent {
+    padding: 30px;
+
+    .serveHead {
+        margin: 30px 0;
+
+        h1 {
+            font-size: 2.5rem;
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+            font-weight: 900;
+            width: 40%;
+        }
+
+        p {
+            color: var(--productColor);
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+            font-weight: 900;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+    }
+
+    .serviceWrapper {
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 20px;
+
+        .serviceElem {
+            display: flex;
+            padding: 30px 15px;
+            cursor: default;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                box-shadow: 1px 1px 18px 0px rgba(42, 3, 58, 0.36);
+            }
+
+            .serveIcon {
+                color: var(--productColor);
+                margin-right: 20px;
+            }
+
+            .serveDetail {
+                h1 {
+                    font-size: 1.5rem;
+                    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+                    font-weight: 900;
+                    margin: 10px 0;
+                    letter-spacing: 1px;
+                }
+                p {
+                    font-size: 18px;
+                    opacity: 0.5;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+
+    .serveBanner {
+        background: url("../../assets/vr.jpg") no-repeat center center/cover;
+        position: relative;
+        width: 100%;
+        height: 70vh;
+        margin: 70px 0;
+
+        .bannerWrapper {
+            background-color: var(--transLayer);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: #fff;
+
+            .bannerDetail {
+                width: 70%;
+                margin: 30px;
+
+                p {
+                    font-size: 1.2rem;
+                }
+                h1 {
+                    font-size: 3.5rem;
+                }
+            }
+            button {
+                width: 200px;
+                height: 60px;
+                font-size: 20px;
+                color: #fff;
+                outline: none;
+                border: none;
+                background: none;
+                border: 2px solid #fff;
+                margin: 10px 30px;
+                cursor: pointer;
+                transition: background-color 0.3s ease-in-out;
+
+                &:hover {
+                    border: none;
+                    background-color: var(--primaryColor);
+                }
+            }
+        }
+    }
+
+    .serveProject {
+        .projectHead{
+            display: flex;
+            justify-content: space-between;
+            margin: 60px 20px;
+
+            .headers{
+                h2{
+                    font-family: var(--secondaryFont);
+                    font-weight: 800;
+                    font-size: 15px;
+                    color: var(--productColor);
+                }
+                h1{
+                    font-family: var(--primaryFont);
+                    font-weight: 800;
+                    font-size: 3rem;
+                }
+            }
+            p{
+                width: 50%;
+                font-size: 18px;
+                opacity: .7;
+            }
+        }
+
+        .serveInside {
+            display: flex;
+            overflow-x: hidden;
+
+            .projectContainer {
+                cursor: pointer;
+
+                .projectWrapper {
+                    position: relative;
+                    width: 45vw;
+                    margin: 0 10px;
+                    overflow: hidden;
+
+                    &:hover {
+                        .transBg {
+                            background-color: var(--transLayer);
+                        }
+
+                        .projectDetail {
+                            .projectIcon {
+                                color: #fff;
+                                background-color: var(--primaryColor);
+                            }
+                        }
+                    }
+                    .transBg {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 18vh;
+                        background-color: none;
+                        transition: 0.3s;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 50vh;
+                        transition: all 0.3s ease-in-out;
+                    }
+
+                    .projectDetail {
+                        position: relative;
+                        top: -60px;
+                        color: #fff;
+                        margin: 0 20px;
+                        padding: 30px;
+                        background-color: var(--productBox);
+
+                        .projectIcon {
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            color: var(--primaryColor);
+                            border-radius: 0 0 0 200%;
+                            padding: 20px 20px 30px 40px;
+                            background-color: var(--iconCirle);
+                            transition: all 0.3s ease-in-out;
+                        }
+
+                        h1 {
+                            font-size: 1.5rem;
+                        }
+                        p {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .control {
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+
+            .arrow {
+                margin: 10px;
+                transition: 0.3s;
+
+                &:hover {
+                    color: var(--primaryColor);
+                }
+            }
+        }
+    }
+}

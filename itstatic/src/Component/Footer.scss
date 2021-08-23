@@ -1,0 +1,71 @@
+.footer{
+    margin-top: 100px;
+    
+    .footerWrapper{
+        background-color: var(--productBg);
+        color: #fff;
+        padding: 60px 20px;
+
+        .footerColumns{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            place-items: center;
+            height: 100%;
+            width: 100%;
+            margin: 20px 40px 20px 0;
+
+            .footerItem{
+                h1{
+                    font-size: 1.8rem;
+                    margin-bottom: 40px;
+                }
+                .footerService{
+                    h2{
+                        font-size: 18px;
+                        opacity: .6;
+                        margin: 20px 0;
+                        cursor: pointer;
+                        transition: opacity, transform .3s ease-in-out;
+
+                        &:hover{
+                            opacity: 1;
+                            transform: scale(1.1);
+                        }
+                    }
+                    h3{
+                        font-size: 18px;
+                    }
+                    
+                    .footerInput{
+                        display: flex;
+                        justify-content: space-between;
+                        background-color: var(--iconCirle);
+                        margin: 20px 0;
+                        // padding: 10px 20px;
+
+                        #email{
+                            font-size: 18px;
+                            color: #fff;
+                            background: none;
+                            outline: none;
+                            border: none;
+                            padding: 5px 20px;
+                        }
+                        .icon{
+                            background-color: var(--primaryColor);
+                            color: #fff;
+                            padding: 10px;
+                            cursor: pointer;
+                            transition: all .3s ease-in-out;
+
+                            &:hover{
+                                color: var(--primaryColor);
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

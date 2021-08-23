@@ -1,0 +1,24 @@
+:root{
+  --globalFont: 'Nunito Sans', sans-serif;
+  --primaryFont: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  --secondaryFont: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --globalColor: #000;
+  --globalBg: #fff;
+  --globalLightBorder: 1px solid rgba(0,0,0,.1);
+  --box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.2);
+  --navBorderColor: #00bfff;
+  --transLayer: #02626e38;
+  --transNavBg: #ffffff38;
+  --primaryColor: #00bfff;
+  --productColor: #6f42c1;
+  --productBox: #262051;
+  --productBg: #221F3C;
+  --iconCirle: #332d5f;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--globalFont);
+}

@@ -1,0 +1,219 @@
+.aboutBanner {
+    background: url("../../assets/absBg.jpg") no-repeat center center/cover;
+    width: 100vw;
+    height: 75vh;
+    color: #fff;
+
+    .aboutWrapper {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin: 0 50px;
+
+        .aboutDetail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            h1 {
+                font-size: 4rem;
+            }
+            .aboutBreadCrumb {
+                display: flex;
+
+                .breadLink {
+                    text-decoration: none;
+                    color: #fff;
+                }
+                h2 {
+                    font-size: 20px;
+                    &:first-child {
+                        &:hover {
+                            border-bottom: 3px solid var(--primaryColor);
+                        }
+                    }
+                    &:nth-child(2) {
+                        margin: 0 15px;
+                    }
+                    &:nth-child(3) {
+                        color: var(--primaryColor);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.offerParent {
+    .offerWrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 50px 30px;
+
+        .offerDetail {
+            width: 50%;
+
+            h2 {
+                font-size: 18px;
+                color: var(--productColor);
+            }
+            h1 {
+                font-size: 2.5rem;
+                font-family: var(--secondaryFont);
+                font-weight: 800;
+                margin: 20px 0;
+            }
+            p {
+                font-size: 18px;
+                line-height: 30px;
+                opacity: 0.7;
+            }
+        }
+        .offerImg {
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+
+            .firstContainer {
+                width: 100%;
+                margin: 10px;
+
+                &:nth-child(2) {
+                    margin-top: 40px;
+
+                    .imgItem {
+                        &:nth-child(1) {
+                            background: url("../../assets/bannerBg.jpg") no-repeat center center/cover;
+                        }
+                        &:nth-child(2) {
+                            background: url("../../assets/bannerBg2.jpg") no-repeat center center/cover;
+                        }
+                    }
+                }
+
+                .imgItem {
+                    position: relative;
+                    width: 100%;
+                    height: 200px;
+                    color: #fff;
+                    cursor: pointer;
+                    margin: 20px 0;
+
+                    &:hover {
+                        .itemWrapper {
+                            background-color: transparent;
+                        }
+                    }
+
+                    &:nth-child(1) {
+                        background: url("../../assets/bannerBg3.jpg") no-repeat center center/cover;
+                    }
+                    &:nth-child(2) {
+                        background: url("../../assets/bannerBg4.jpg") no-repeat center center/cover;
+                    }
+
+                    .itemWrapper {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: rgba($color: #012044, $alpha: 0.5);
+                        transition: background-color 0.3s ease-in-out;
+
+                        h1 {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.outcomeParent {
+    background: url('../../assets/absBg2.jpg') no-repeat center center/cover;
+    height: 90vh;
+    width: 100%;
+    color: #fff;
+    padding: 20px 0;
+
+    .outcomeWrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 20px;
+
+        .outcomePic{
+            width: 55%;
+            margin: 0 30px;
+            .mereBg{
+                width: 90%;
+                background: linear-gradient(70deg, rgba(0,152,247,1) 0%, rgba(107,9,121,1) 100%, rgba(0,212,255,1) 100%);
+                margin: -20px 0 0 -20px;
+                img{
+                    width: 100%;
+                    height: 300px;
+                    position: relative;
+                    top: 40px;
+                    left: 40px;
+                }
+            }
+        }
+        .outcomeDetails{
+            width: 45%;
+            h2{
+                font-size: 20px;
+                opacity: .4;
+                margin: 10px 0;
+            }
+            h1{
+                font-size: 2rem;
+            }
+            .outcomeIconContainer{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                margin: 20px 0;
+
+                .outcomeIcon{
+                    border: 1px solid rgba($color: #ffffff, $alpha: .4);
+                    padding: 15px 20px;
+                    color: var(--primaryColor);
+                    cursor: pointer;
+                    transition: all .3s ease;
+
+                    &:hover{
+                        color: #fff;
+                        background-color: var(--primaryColor);
+                    }
+                }
+            }
+            h3{
+                font-size: 1.2rem;
+                opacity: .9;
+                margin: 10px 0;
+            }
+            .outcomePara{
+                p{
+                    font-size: 18px;
+                    opacity: .6;
+                }
+            }
+            .learnBtn{
+                display: flex;
+                margin: 20px 0;
+
+                h1{
+                    font-size: 20px;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+}

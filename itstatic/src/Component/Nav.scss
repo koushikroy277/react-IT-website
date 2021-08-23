@@ -1,0 +1,119 @@
+@mixin borderMixin($width) {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 35px;
+  left: 5px;
+  width: $width;
+  height: 3px;
+  background-color: var(--navBorderColor);
+  transition: width 0.4s;
+}
+
+@mixin menuMixin($top, $opacity, $visibility) {
+  position: absolute;
+  top: $top;
+  left: 15px;
+  opacity: $opacity;
+  visibility: $visibility;
+  width: 240px;
+  background-color: var(--globalBg);
+  transition: all 0.4s;
+
+  .menuWrapper {
+    border: var(--globalLightBorder);
+    padding: 20px 30px;
+
+    .menuItem {
+      text-decoration: none;
+      color: var(--globalColor);
+      cursor: pointer;
+      margin: 5px 0;
+
+      h1 {
+        font-size: 18px;
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+@mixin parentMixin($bg, $color, $lightColor){
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: var(--globalLightBorder);
+  background-color: $bg;
+  padding: 25px 0;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  transition: .3s;
+
+  .company {
+    color: $color;
+  }
+
+  .linkContainer {
+    display: flex;
+
+    .linkItem {
+      position: relative;
+
+      .linkActive {
+        padding-bottom: 10px;
+
+        h1 {
+          &::after {
+            @include borderMixin(70%);
+          }
+        }
+      }
+
+      .menuContainer {
+        @include menuMixin(120px, 0, hidden);
+      }
+
+      .menuContainer.active {
+        @include menuMixin(55px, 1, visible);
+      }
+
+      .link {
+        display: flex;
+        text-decoration: none;
+        color: $color;
+        margin: 10px 20px;
+        position: relative;
+
+        &::after {
+          @include borderMixin(0%);
+        }
+
+        &:hover::after {
+          width: 70%;
+        }
+
+        h1 {
+          font-size: 20px;
+          margin: 0 5px;
+        }
+        .linkIcon {
+          opacity: 0.6;
+          color: $lightColor;
+          margin: 5px;
+        }
+      }
+    }
+  }
+}
+
+.navParent {
+  @include parentMixin(var(--transNavBg), var(--globalBg), #fdfdfd)
+}
+
+.navParent.active {
+  @include parentMixin(var(--globalBg), var(--globalColor), #5c5c5c)
+}

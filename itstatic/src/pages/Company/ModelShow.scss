@@ -1,0 +1,204 @@
+.modelParent {
+    .modelWrapper {
+        margin: 0 0 100px 0;
+        .modelHead {
+            display: grid;
+            place-items: center;
+            margin: 100px 0;
+            h2 {
+                font-size: 20px;
+                opacity: 0.6;
+                color: var(--productColor);
+            }
+            h1 {
+                font-size: 3rem;
+                margin: 20px 0;
+            }
+            p {
+                font-size: 18px;
+                opacity: 0.6;
+                max-width: 60%;
+                text-align: center;
+            }
+        }
+        .modelShowWrapper {
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            margin: 0 30px;
+
+            .modelPersons {
+                position: relative;
+                overflow: hidden;
+                transition: 0.3s;
+
+                &:hover {
+                    box-shadow: var(--box-shadow);
+
+                    .personSocial {
+                        top: 0;
+                    }
+                }
+
+                .personSocial {
+                    position: absolute;
+                    top: -100%;
+                    right: 0;
+                    background-color: var(--iconCirle);
+                    padding: 20px;
+                    transition: 0.6s;
+
+                    .socialMedia {
+                        .mediaIcons {
+                            margin: 10px 0;
+                            color: #fff;
+                            opacity: 0.7;
+                            cursor: pointer;
+                            transition: color 0.3s ease;
+
+                            &:hover {
+                                color: var(--primaryColor);
+                            }
+                        }
+                    }
+                }
+                .personContainer {
+                    img {
+                        width: 300px;
+                        height: 400px;
+                    }
+
+                    .personDetails {
+                        padding: 20px;
+                        h1 {
+                            text-align: center;
+                            font-size: 1.5rem;
+                        }
+                        h2 {
+                            text-align: center;
+                            font-size: 1.2rem;
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.activityParent {
+    background: linear-gradient(
+        90deg,
+        rgba(49, 157, 224, 1) 0%,
+        rgba(17, 91, 191, 1) 20%,
+        rgba(24, 50, 184, 1) 51%,
+        rgba(85, 12, 136, 1) 76%,
+        rgba(94, 18, 138, 1) 85%,
+        rgba(107, 9, 121, 1) 98%
+    );
+    color: #fff;
+    height: 40vh;
+
+    .activityWrapper {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+
+        .activityItem {
+            h1 {
+                font-family: var(--secondaryFont);
+                font-weight: 900;
+                font-size: 3rem;
+            }
+            h2 {
+                position: relative;
+                left: 20px;
+                opacity: 0.8;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 10px;
+                    left: -20px;
+                }
+            }
+        }
+    }
+}
+
+@mixin meritProgress($width) {
+    content: "";
+    display: block;
+    width: $width;
+    height: 6px;
+    background-color: var(--primaryColor);
+    border-radius: 15px;
+    position: absolute;
+    bottom: -20px;
+}
+
+.meritParent {
+    .meritWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 100px 20px;
+
+        .meritDetails {
+            width: 60%;
+            margin-left: 30px;
+            
+            h2 {
+                font-size: 18px;
+                color: var(--productColor);
+            }
+            h1 {
+                font-size: 3rem;
+            }
+            p {
+                font-size: 18px;
+                opacity: 0.6;
+                margin: 20px 0;
+            }
+
+            .meritProgress {
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                margin: 50px 0;
+            }
+            .meritProgress.one{
+                &::after {
+                    @include meritProgress(80%);
+                }
+            }
+            .meritProgress.two{
+                &::after {
+                    @include meritProgress(95%);
+                }
+            }
+            .meritProgress.three{
+                &::after {
+                    @include meritProgress(70%);
+                }
+            }
+        }
+
+        .meritImg {
+            width: 40%;
+            margin-left: 50px;
+
+            img {
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+            }
+        }
+    }
+}
